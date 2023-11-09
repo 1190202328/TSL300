@@ -201,8 +201,8 @@ def compute_average_precision_classification(ground_truth, prediction):
             lock_gt[this_gt['index']] = idx
 
     # Computing prec-rec
-    tp = np.cumsum(tp).astype(np.float)
-    fp = np.cumsum(fp).astype(np.float)
+    tp = np.cumsum(tp).astype(np.float32)
+    fp = np.cumsum(fp).astype(np.float32)
     rec = tp / npos
     prec = tp / (tp + fp)
     return interpolated_prec_rec(prec, rec)

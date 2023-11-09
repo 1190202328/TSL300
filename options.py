@@ -1,12 +1,14 @@
 import argparse
-import shutil
 import os
+import shutil
+
 
 def parse_args():
     descript = 'TSL-Net'
     parser = argparse.ArgumentParser(description=descript)
 
-    parser.add_argument('--data_path', type=str, default='./dataset/VideoSenti')
+    parser.add_argument('--data_path', type=str,
+                        default='/nfs/ofs-902-1/object-detection/jiangjing/datasets/TSL-300/TSL-300')
     parser.add_argument('--model_path', type=str, default='./models/train')
     parser.add_argument('--output_path', type=str, default='./outputs/train')
     parser.add_argument('--log_path', type=str, default='./logs/train')

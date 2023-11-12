@@ -73,7 +73,7 @@ class Total_loss(nn.Module):
         return loss_total, loss
 
 
-def train_all(net, config, loader_iter, optimizer, criterion, logger, step):
+def train_all(net, config, loader_iter, optimizer, criterion, logger, time_logger, step):
     net.train()
 
     total_loss = {}

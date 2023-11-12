@@ -47,3 +47,4 @@ if __name__ == "__main__":
     
     utils.save_best_record(test_info, 
         os.path.join(config.output_path, "best_record.txt"))
+    print(test_info)

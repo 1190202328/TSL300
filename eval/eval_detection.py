@@ -228,7 +228,7 @@ def compute_average_precision_detection(ground_truth, prediction, tiou_threshold
     """
     ap = np.zeros(len(tiou_thresholds))
     if prediction.empty:
-        return ap
+        return ap, ap, ap
 
     npos = float(len(ground_truth))
     lock_gt = np.ones((len(tiou_thresholds),len(ground_truth))) * -1

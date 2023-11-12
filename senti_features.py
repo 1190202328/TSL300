@@ -67,7 +67,7 @@ class SentiFeature(data.Dataset):
 
         return index, data, label, point_anno, stored_info, self.vid_list[index], vid_num_seg, label_distribution
 
-    
+
     def get_data(self, index):
         vid_name = self.vid_list[index]
 
